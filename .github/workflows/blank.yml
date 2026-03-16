@@ -44,16 +44,7 @@ jobs:
           message: Hello, ${{secrets.NAME}} ${{vars.MY_FIRST_NAME}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           # Path of the file that should be commented
-          file-path: # optional
-          # Github token of the repository (automatically created by Github)
-          github-token: # optional, default is ${{ github.token }}
-          # You can set some reactions on your comments through the `reactions` input.
-          reactions: # optional
-          # Manual pull request number
-          pr-number: # optional
-          # A tag on your comment that will be used to identify a comment in case of replacement.
-          comment-tag: # optional
-          # Mode that will be used (upsert/recreate/delete/delete-on-completion)
+
           mode: # optional, default is upsert
           # Whether a comment should be created even if comment-tag is not found.
           create-if-not-exists: # optional, default is true
