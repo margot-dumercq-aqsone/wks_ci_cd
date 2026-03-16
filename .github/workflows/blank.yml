@@ -12,7 +12,8 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+permissions : 
+  pull-requests: write
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -41,6 +42,7 @@ jobs:
         with:
           # Message that should be printed in the pull request
           message: Hello, ${{secrets.NAME}} ${{vars.MY_FIRST_NAME}}
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           # Path of the file that should be commented
           file-path: # optional
           # Github token of the repository (automatically created by Github)
