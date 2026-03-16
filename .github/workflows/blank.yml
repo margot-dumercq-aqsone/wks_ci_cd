@@ -42,7 +42,7 @@ jobs:
         with:
           # Message that should be printed in the pull request
           message: Hello, ${{secrets.NAME}} ${{vars.MY_FIRST_NAME}}
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          github-token: ${{secrets.GITHUB_TOKEN}}
           # Path of the file that should be commented
 
           mode: # optional, default is upsert
